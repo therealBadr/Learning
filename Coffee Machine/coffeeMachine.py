@@ -93,7 +93,7 @@ while machine_on:
         machine_on = False
     else:
         drink = MENU[user_choice]
-        if check_ressources[drink["ingredients"]]:
+        if check_ressources(drink["ingredients"]):
             cost = drink_price()
             if enough_money(cost, drink["cost"]):
                 making_coffee(user_choice, drink["ingredients"])
